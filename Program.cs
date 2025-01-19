@@ -15,6 +15,7 @@ internal class Program
             int reech = ((input?.StartsWith("echo")) == true) ? 0 : -1;
             int reexi = ((input?.StartsWith("exit")) == true) ? 0 : -1;
             int reels = ((input?.StartsWith("ls")) == true) ? 0 : -1;
+            int reecd = ((input?.StartsWith("cd")) == true) ? 0 : -1;
 
             switch (reech)
             {
@@ -50,7 +51,16 @@ internal class Program
                     {
                         Console.WriteLine(dir);
                     }
+                    
+                    break;
+            }
 
+            switch (reecd)
+            {
+                case 0:
+                    usedOrNot = 1;
+
+                    if (input != null) Directory.SetCurrentDirectory(input.Substring(3, input.Length - 3));
                     break;
             }
 
