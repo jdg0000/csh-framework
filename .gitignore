@@ -1,4 +1,6 @@
-bin/
+.idea/
+.DS_Store
+.gitignore
 obj/
 /packages/
 riderModule.iml
