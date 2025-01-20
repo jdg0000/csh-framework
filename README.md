@@ -43,16 +43,27 @@ dotnet run
 Example Usage:
 
 csh1> echo Hello, World!
+
 Hello, World!
+
 csh1> ls
+
 /path/to/file1.txt
+
 /path/to/file2.txt
+
 /path/to/directory
+
 csh1> cd /path/to/directory
+
 csh1> history
+
 echo Hello, World!
+
 ls
+
 cd /path/to/directory
+
 csh1> exit
 
 Contributing
