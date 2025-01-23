@@ -76,7 +76,7 @@ internal static class Program
                     }
                     catch (DirectoryNotFoundException e)
                     {
-                        Console.WriteLine($"ERROR: {e}");
+                        Console.WriteLine("unable to find the directory");
                     }
                     
                     break;
