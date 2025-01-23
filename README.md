@@ -44,7 +44,8 @@ Building the Project
 		dotnet build
 
 Running the compiled program:
-dotnet run
+		
+	dotnet run
 
 Example Usage:
 
