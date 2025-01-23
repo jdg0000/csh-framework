@@ -2,6 +2,8 @@ CSH Framework
 
 This project is a basic custom shell framework implemented in C#. It provides a command-line interface to execute simple shell-like commands such as echo, ls, cd, history, clear, and exit.
 
+Full documentation at nllfy.github.io/index.html, NOTE: do not forget the index.html otherwise it will show the old documentation 
+
 Features
 
 The framework supports the following commands:
