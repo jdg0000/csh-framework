@@ -1,4 +1,8 @@
-﻿namespace csh_framework;
+﻿using System.Diagnostics;
+
+namespace csh_framework;
+
+using csh_framework;
 internal static class Program
 {
     public static void Main(string[] args)
@@ -7,11 +11,10 @@ internal static class Program
         
         while (true)
         {
-            Console.Write("csh1> ");
+            Console.Write("csf1> ");
             string? input = Console.ReadLine(); 
             int usedOrNot = 0;
             
-
             int reusi = ((input?.StartsWith("using")) == true) ? 0 : -1;
             int reech = ((input?.StartsWith("echo")) == true) ? 0 : -1;
             int reexi = ((input?.StartsWith("exit")) == true) ? 0 : -1;
@@ -73,7 +76,7 @@ internal static class Program
                     }
                     catch (DirectoryNotFoundException e)
                     {
-                        Console.WriteLine("Directory not found");
+                        Console.WriteLine($"ERROR: {e}");
                     }
                     
                     break;
@@ -109,6 +112,33 @@ internal static class Program
 
                     break;
             }
+
+            switch (reusi)
+            {
+                case 0:
+                    usedOrNot = 1;
+                    int usedOrNotSet = 0;
+
+                    string? module = input?.Substring(6);
+
+                    if (module != null && module.Equals("server", StringComparison.OrdinalIgnoreCase))
+                    {
+                        usedOrNotSet = 1; 
+                        include.Shell.Sshell();
+                    } 
+                    
+                    else if (module != null && module.Equals("client", StringComparison.OrdinalIgnoreCase))
+                    {
+                        usedOrNotSet = 1; 
+                        include.Shell.Cshell();
+                    }
+
+                    if (usedOrNotSet == 0) Console.WriteLine("unknown module");
+                    
+                    break;
+            }
+
+            if (input == "") { usedOrNot = 1;}
 
             switch (usedOrNot)
             {
