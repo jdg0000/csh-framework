@@ -47,6 +47,8 @@ Running the compiled program:
 		
 	dotnet run
 
+or download the installer or the executable from the releases NOTE: the mac executable works on linux
+
 Example Usage:
 
 	csh1> echo Hello, World!
